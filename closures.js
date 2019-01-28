@@ -213,14 +213,20 @@ function secretNumber() {
 */
 
 function timeOutCounter() {
-  function update(i){
+const storeUpdates = [];
 
-   setTimeout(function() {
-        console.log( ` ${i} second after call - log ${i} ` );
+function update(i){
+  setTimeout(function() {
+        console.log( i );
       }, i * 1000); 
-  }
-    for(var i = 0; i <= 5; i++) {
-        update(i);
-      }
 }
+
+  for(var i = 0; i <= 5; i++) {
+      storeUpdates[i] = update(i);
+    }
+  for(var j = 0; j <= 5; j++) {
+    storeUpdates[i];
+  }
+}
+
 timeOutCounter();
